@@ -1,3 +1,5 @@
+import pymysql
+
 def makeCoOccurence(host,user,password,dbname):
     connect = pymysql.connect(host=host, user=user, password=password, db=dbname, charset='utf8mb4')
     cursor = connect.cursor()
