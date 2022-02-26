@@ -6,7 +6,7 @@
 > scholar와 scholarwithname -> CoOccurence  
 2. MakeSN.py, UpdateSN.py 실행  
 > 의료진 간의 공동작업 수, 각 의료진의 논문 작성수 + 대표 질병코드 표시  
-> CoOccurence + doctor_scholar -> SocialNetwork(SN_paper, SN_paper_cnt)  
+> CoOccurence + doctor_top -> SocialNetwork(SN_paper, SN_paper_cnt)  
 3. MakeNodes.py, (cris 정보 추가하는 파이썬 코드 (UpdateNodes.py 로 이름 지으면 좋을 듯)) 실행  
 > 논문 또는 임상시험 공동작업 활동을 한 의료진들의 노드화  
 > SocialNetwork + (임상시험 정보 추가에 필요한 테이블 이름) -> Nodes  
