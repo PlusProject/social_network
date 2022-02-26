@@ -53,7 +53,7 @@ def makeNodes(host,user,password,dbname):
         edges.append([fr,to,(paper[3]-mined+1)/(maxed-mined+1)*10])
     maxcnt=paper_cnts[0][2]
     try:
-        cursorn.execute("if exists drop table Nodes;")
+        cursorn.execute("drop table if exists Nodes;")
         cursorn.execute("create table Nodes (id int primary key, label mediumtext, disease mediumtext, color mediumtext, paper_cnt int, clinical_cnt int,belong mediumtext, borderWidth int);")
         connectn.commit()
     except:
