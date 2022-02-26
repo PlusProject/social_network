@@ -2,14 +2,14 @@
 
 ## Node
 1. MakeCoOccur.py 실행  
-> scholar와 scholarwithname -> CoOccurence  
 > 각 논문마다 공동작가 표시  
+> scholar와 scholarwithname -> CoOccurence  
 2. MakeSN.py, UpdateSN.py 실행  
-> CoOccurence + doctor_scholar -> SocialNetwork(SN_paper, SN_paper_cnt)  
 > 의료진 간의 공동작업 수, 각 의료진의 논문 작성수 + 대표 질병코드 표시  
+> CoOccurence + doctor_scholar -> SocialNetwork(SN_paper, SN_paper_cnt)  
 3. MakeNodes.py, (cris 정보 추가하는 파이썬 코드 (UpdateNodes.py 로 이름 지으면 좋을 듯)) 실행  
-> SocialNetwork + (임상시험 정보 추가에 필요한 테이블 이름) -> Nodes  
 > 논문 또는 임상시험 공동작업 활동을 한 의료진들의 노드화  
+> SocialNetwork + (임상시험 정보 추가에 필요한 테이블 이름) -> Nodes  
 
 ## Edge
 ### 논문
@@ -23,6 +23,12 @@
 > (scholar_year 만들 때 필요한 테이블) -> scholar_year  
 
 ### 임상시험
-1. (MakeCrisEdge.py로 이름 지으면 좋을 듯) 실행  
+1. (node_cris_belong, node_cris_cnt 생성 파일) 실행  
+> 임상시험을 한 의료진 간의 노드 및 엣지 만들기  
+> (필요한 테이블) -> node_cris_belong, node_cris_cnt  
+2. MakeNetworkCrisEdge.py 실행  
 > 의료진 간의 질병코드 및 임상시험 수 표시  
-> (cris_edge 만들 때 필요한 테이블) -> cris_edge  
+> node_cris_belong + node_cris_cnt -> network.cris_edge  
+3. MakeCrisEdge.py 실행  
+> 각 의료진마다 대응하는 노드의 id 부여  
+> Nodes + network.cris_edge -> medii.cris_edge  
