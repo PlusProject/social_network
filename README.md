@@ -1,1 +1,22 @@
-# social_network
+# Social Network
+
+## Node
+1. MakeCoOccur.py 실행  
+> scholar와 scholarwithname -> CoOccurence 각 논문마다 공동작가 표시  
+2. MakeSN.py, UpdateSN.py 실행  
+> doctor_scholar + CoOccurence -> SocialNetwork(의료진 간의 공동작업 수, 각 의료진의 논문 작성수 + 대표 질병코드)  
+3. MakeNodes.py, (cris 정보 추가) 실행  
+> SocialNetwork + Cris (임상시험) -> Nodes (논문 또는 임상시험 공동작업 활동을 한 의료진들의 노드화)  
+
+## Edge
+### 논문
+1. MakePaperYearEdge.py 실행  
+> 전체 의료진 및 개별 의료진 추천에 사용  
+> 년도별 논문 작성수 및 의료진 간의 대표 질병코드 표시 
+2. MakePaperYearDiseaseEdge.py 실행
+> 추천 후 의료진 추천에 사용  
+> 년도 별 각 질병코드의 논문 수 표시
+
+### 임상시험
+1. MakeCrisEdge.py 실행
+> 의료진 간의 질병코드 및 임상시험 수 표시
