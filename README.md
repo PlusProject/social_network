@@ -17,12 +17,12 @@
 > 전체 의료진 및 개별 의료진 추천에 사용  
 > 년도별 논문 작성수 및 의료진 간의 대표 질병코드 표시  
 > CoOccurence + SN_paper_cnt(의료진 간의 대표 질병코드) -> SN_paper_edge_year  
-2. (MakePaperYearDiseaseEdge.py로 이름 지으면 좋을 듯) 실행
+2. (MakePaperYearDiseaseEdge.py로 이름 지으면 좋을 듯) 실행  
 > 추천 후 의료진 추천에 사용  
-> 년도 별 각 질병코드의 논문 수 표시
-> (scholar_year 만들 때 필요한 테이블) -> scholar_year
+> 년도 별 각 질병코드의 논문 수 표시  
+> (scholar_year 만들 때 필요한 테이블) -> scholar_year  
 
 ### 임상시험
-1. (MakeCrisEdge.py로 이름 지으면 좋을 듯) 실행
+1. (MakeCrisEdge.py로 이름 지으면 좋을 듯) 실행  
 > 의료진 간의 질병코드 및 임상시험 수 표시  
-> (cris_edge 만들 때 필요한 테이블) -> cris_edge
+> (cris_edge 만들 때 필요한 테이블) -> cris_edge  
