@@ -2,6 +2,7 @@ import pymysql
 import pandas as pd
 
 def updateNodes(host,user,password):
+    # mysql 연결
     conn = pymysql.connect(host=host, user=user, password=password, db='medii', charset='utf8mb4')
     curs = conn.cursor()
 
