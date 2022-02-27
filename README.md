@@ -23,7 +23,7 @@
 > (scholar_year 만들 때 필요한 테이블) -> scholar_year  
 
 ### 임상시험
-1. (node_cris_belong, node_cris_cnt 생성 파일) 실행  
+1. CrisWithBelong.py 실행  
 > 임상시험을 한 의료진 간의 노드 및 엣지 만들기  
 > (필요한 테이블) -> node_cris_belong, node_cris_cnt  
 2. MakeNetworkCrisEdge.py 실행  
